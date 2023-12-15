@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import { useAxiosPrivate, useLogout } from "hooks";
-import "./Dashboard.scss";
+import "./style.scss";
 
-export default function Dashboard() {
+export default function Index() {
   const logout = useLogout();
   const axiosPrivate = useAxiosPrivate();
 
@@ -13,10 +13,10 @@ export default function Dashboard() {
       })
       .then(() => {});
   }, []);
+
   return (
     <div className="dashboard">
       Dashboard
-      <button onClick={() => logout()}>Sign Out</button>
     </div>
   );
 }

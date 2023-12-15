@@ -7,9 +7,9 @@ import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { axios } from "services";
 import apiRoutes from "configs/apiRoutes";
 import useAuth from "hooks/useAuth";
-import "./Login.scss";
+import "./style.scss";
 
-export default function Login() {
+export default function Index() {
   const { setAuth, persist } = useAuth();
   const [errorMessage, setErrorrMessage] = useState("");
 
@@ -109,7 +109,7 @@ export default function Login() {
             name="password"
             rules={[{ required: true, message: "Please input your Password!" }]}
           >
-            <Input
+            <Input.Password
               prefix={<LockOutlined className="site-form-item-icon" />}
               type="password"
               placeholder="Password"
@@ -130,6 +130,7 @@ export default function Login() {
               type="primary"
               htmlType="submit"
               className="login-form-button"
+              style={{ marginRight: "10px" }}
             >
               Log in
             </Button>

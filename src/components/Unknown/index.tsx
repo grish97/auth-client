@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import "./Unknown.scss";
+import "./style.scss";
 
-const Unknown = () => {
+const Index = () => {
   return (
     <article style={{ padding: "100px" }}>
       <h1>Oops!</h1>
@@ -13,4 +13,4 @@ const Unknown = () => {
   );
 };
 
-export default Unknown;
+export default Index;
